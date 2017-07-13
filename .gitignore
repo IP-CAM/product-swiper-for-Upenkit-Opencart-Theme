@@ -2,4 +2,11 @@
 /*
 
 !.gitignore
-
+!admin/view/template/extension/module/productswiperforupenkit.tpl
+!admin/controller/extension/module/productswiperforupenkit.php
+!admin/language/en-gb/extension/module/productswiperforupenkit.php
+!admin/language/fa-ir/extension/module/productswiperforupenkit.php
+!catalog/controller/extension/module/productswiperforupenkit.php
+!catalog/language/en-gb/extension/module/productswiperforupenkit.php
+!catalog/language/fa-ir/extension/module/productswiperforupenkit.php
+!catalog/view/theme/default/template/extension/module/productswiperforupenkit.tpl
