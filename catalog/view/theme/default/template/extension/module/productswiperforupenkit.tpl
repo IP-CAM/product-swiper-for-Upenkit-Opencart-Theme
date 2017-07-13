@@ -1,6 +1,6 @@
 <h3 class="box-title"><?php echo $heading_title; ?></h3>
-<div id="owlproducts-<?php echo $uniqid; ?>-nav-container" style="border:1px;"></div>
-<div id="owlproducts-<?php echo $uniqid; ?>" class="owl-carousel owl-theme">
+<div id="productswiperforupenkit-<?php echo $uniqid; ?>-nav-container" style="border:1px;"></div>
+<div id="productswiperforupenkit-<?php echo $uniqid; ?>" class="owl-carousel owl-theme">
     <?php foreach ($products as $product) { ?>
     <div class="product-layout">
         <div class="product-thumb transition">
@@ -54,7 +54,7 @@
 
 <script>
 $(function(){
-    $('#owlproducts-<?php echo $uniqid; ?>').owlCarousel({
+    $('#productswiperforupenkit-<?php echo $uniqid; ?>').owlCarousel({
         loop:true,
         margin:20,
         center: true,
@@ -66,7 +66,7 @@ $(function(){
         stagePadding:10,
         navText: ["<<" , ">>"],
         dots : false,
-        navContainer: '#owlproducts-<?php echo $uniqid; ?>-nav-container'
+        navContainer: '#productswiperforupenkit-<?php echo $uniqid; ?>-nav-container'
     })
 });
 </script>

@@ -1,9 +1,9 @@
-<?php
-class ControllerExtensionModuleOwlproducts extends Controller {
+productswiperforupenkit<?php
+class ControllerExtensionModuleProductswiperforupenkit extends Controller {
 	private $error = array();
 
 	public function index() {
-		$this->load->language('extension/module/owlproducts');
+		$this->load->language('extension/module/productswiperforupenkit');
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
@@ -11,7 +11,7 @@ class ControllerExtensionModuleOwlproducts extends Controller {
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
 			if (!isset($this->request->get['module_id'])) {
-				$this->model_extension_module->addModule('owlproducts', $this->request->post);
+				$this->model_extension_module->addModule('productswiperforupenkit', $this->request->post);
 			} else {
 				$this->model_extension_module->editModule($this->request->get['module_id'], $this->request->post);
 			}
@@ -77,19 +77,19 @@ class ControllerExtensionModuleOwlproducts extends Controller {
 		if (!isset($this->request->get['module_id'])) {
 			$data['breadcrumbs'][] = array(
 				'text' => $this->language->get('heading_title'),
-				'href' => $this->url->link('extension/module/owlproducts', 'token=' . $this->session->data['token'], true)
+				'href' => $this->url->link('extension/module/productswiperforupenkit', 'token=' . $this->session->data['token'], true)
 			);
 		} else {
 			$data['breadcrumbs'][] = array(
 				'text' => $this->language->get('heading_title'),
-				'href' => $this->url->link('extension/module/owlproducts', 'token=' . $this->session->data['token'] . '&module_id=' . $this->request->get['module_id'], true)
+				'href' => $this->url->link('extension/module/productswiperforupenkit', 'token=' . $this->session->data['token'] . '&module_id=' . $this->request->get['module_id'], true)
 			);
 		}
 
 		if (!isset($this->request->get['module_id'])) {
-			$data['action'] = $this->url->link('extension/module/owlproducts', 'token=' . $this->session->data['token'], true);
+			$data['action'] = $this->url->link('extension/module/productswiperforupenkit', 'token=' . $this->session->data['token'], true);
 		} else {
-			$data['action'] = $this->url->link('extension/module/owlproducts', 'token=' . $this->session->data['token'] . '&module_id=' . $this->request->get['module_id'], true);
+			$data['action'] = $this->url->link('extension/module/productswiperforupenkit', 'token=' . $this->session->data['token'] . '&module_id=' . $this->request->get['module_id'], true);
 		}
 
 		$data['cancel'] = $this->url->link('extension/extension', 'token=' . $this->session->data['token'] . '&type=module', true);
@@ -142,11 +142,11 @@ class ControllerExtensionModuleOwlproducts extends Controller {
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');
 
-		$this->response->setOutput($this->load->view('extension/module/owlproducts', $data));
+		$this->response->setOutput($this->load->view('extension/module/productswiperforupenkit', $data));
 	}
 
 	protected function validate() {
-		if (!$this->user->hasPermission('modify', 'extension/module/owlproducts')) {
+		if (!$this->user->hasPermission('modify', 'extension/module/productswiperforupenkit')) {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
 
