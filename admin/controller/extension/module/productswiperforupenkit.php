@@ -1,4 +1,4 @@
-productswiperforupenkit<?php
+<?php
 class ControllerExtensionModuleProductswiperforupenkit extends Controller {
 	private $error = array();
 

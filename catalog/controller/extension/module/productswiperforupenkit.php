@@ -2,7 +2,7 @@
 class ControllerExtensionModuleProductswiperforupenkit extends Controller {
 	public function index($setting) {
 		$data["uniqid"] = uniqid();
-		$this->load->language('extension/module/Productswiperforupenkit');
+		$this->load->language('extension/module/productswiperforupenkit');
 
 		$data['heading_title'] = $this->language->get('heading_title');
 
@@ -79,7 +79,7 @@ class ControllerExtensionModuleProductswiperforupenkit extends Controller {
 			$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.theme.default.min.css');
 			$this->document->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');
 
-			return $this->load->view('extension/module/Productswiperforupenkit', $data);
+			return $this->load->view('extension/module/productswiperforupenkit', $data);
 		}
 	}
 }
