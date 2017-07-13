@@ -33,6 +33,7 @@ class ControllerExtensionModuleProductswiperforupenkit extends Controller {
 		$data['entry_limit'] = $this->language->get('entry_limit');
 		$data['entry_width'] = $this->language->get('entry_width');
 		$data['entry_height'] = $this->language->get('entry_height');
+		$data['entry_breakpoints'] = $this->language->get('entry_breakpoints');
 		$data['entry_status'] = $this->language->get('entry_status');
 
 		$data['button_save'] = $this->language->get('button_save');
@@ -130,6 +131,14 @@ class ControllerExtensionModuleProductswiperforupenkit extends Controller {
 			$data['height'] = 200;
 		}
 
+		if (isset($this->request->post['break_points'])) {
+			$data['break_points'] = $this->request->post['break_points'];
+		} elseif (!empty($module_info)) {
+			$data['break_points'] = $module_info['break_points'];
+		} else {
+			$data['break_points'] = "";
+		}
+
 		if (isset($this->request->post['status'])) {
 			$data['status'] = $this->request->post['status'];
 		} elseif (!empty($module_info)) {
@@ -160,6 +169,10 @@ class ControllerExtensionModuleProductswiperforupenkit extends Controller {
 
 		if (!$this->request->post['height']) {
 			$this->error['height'] = $this->language->get('error_height');
+		}
+
+		if (!$this->request->post['break_points']) {
+			$this->request->post['break_points'] = "";
 		}
 
 		return !$this->error;

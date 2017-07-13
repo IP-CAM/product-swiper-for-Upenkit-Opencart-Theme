@@ -12,6 +12,7 @@ $_['entry_name']       = 'Module Name';
 $_['entry_limit']      = 'Limit';
 $_['entry_width']      = 'Width';
 $_['entry_height']     = 'Height';
+$_['entry_breakpoints']     = 'Break points';
 $_['entry_status']     = 'Status';
 
 // Error

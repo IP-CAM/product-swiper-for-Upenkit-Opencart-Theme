@@ -79,6 +79,7 @@ $(function(){
         autoheight: true,
         navText: ["<span uk-icon='icon: triangle-left'></span>" , "<span uk-icon='icon: triangle-right'></span>"],
         responsive : {
+            <?php if($break_points) echo $break_points; else { ?>
             0 : {
                 items:1
             },
@@ -91,6 +92,7 @@ $(function(){
             1100 : {
                 items:4
             }
+            <?php } ?>
         },
         dots : false,
         navContainer: '#productswiperforupenkit-<?php echo $uniqid; ?>-nav-container'

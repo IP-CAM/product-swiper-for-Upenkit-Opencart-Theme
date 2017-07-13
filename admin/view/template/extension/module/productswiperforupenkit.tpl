@@ -59,6 +59,12 @@
             </div>
           </div>
           <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-break-points"><?php echo $entry_breakpoints; ?></label>
+            <div class="col-sm-10">
+              <textarea type="text" name="break_points" rows="5" placeholder="<?php echo $entry_breakpoints; ?>" id="input-height" class="form-control"><?php echo $break_points; ?></textarea>
+            </div>
+          </div>
+          <div class="form-group">
             <label class="col-sm-2 control-label" for="input-status"><?php echo $entry_status; ?></label>
             <div class="col-sm-10">
               <select name="status" id="input-status" class="form-control">

@@ -5,6 +5,7 @@ class ControllerExtensionModuleProductswiperforupenkit extends Controller {
 		$this->load->language('extension/module/productswiperforupenkit');
 
 		$data['heading_title'] = $setting["name"];
+		$data['break_points'] = $setting["break_points"];
 
 		$data['text_tax'] = $this->language->get('text_tax');
 
