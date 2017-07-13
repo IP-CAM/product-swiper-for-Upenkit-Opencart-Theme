@@ -4,7 +4,7 @@ class ControllerExtensionModuleProductswiperforupenkit extends Controller {
 		$data["uniqid"] = uniqid();
 		$this->load->language('extension/module/productswiperforupenkit');
 
-		$data['heading_title'] = $this->language->get('heading_title');
+		$data['heading_title'] = $setting["name"];
 
 		$data['text_tax'] = $this->language->get('text_tax');
 
